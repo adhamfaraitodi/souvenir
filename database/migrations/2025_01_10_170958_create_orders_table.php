@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('company_profile',255);
             $table->text('description');
             $table->enum('payment_status',['pending', 'success', 'failed', 'canceled', 'deny']);
+            $table->date('payment_date');
             $table->enum('order_status',['pending', 'paid', 'processing', 'shipped', 'delivered', 'completed', 'canceled', 'failed', 'refunded', 'on_hold']);
             $table->timestamps();
 

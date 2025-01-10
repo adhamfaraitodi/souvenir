@@ -15,6 +15,7 @@ class Order extends Model
         'company_profile',
         'description',
         'payment_status',
+        'payment_date',
         'order_status',
         'created_at',
         'updated_at',
