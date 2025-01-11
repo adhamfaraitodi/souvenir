@@ -19,12 +19,13 @@ return new class extends Migration
             $table->string('company_profile',255);
             $table->text('description');
             $table->enum('payment_status',['pending', 'success', 'failed', 'canceled', 'deny']);
+            $table->date('payment_date');
             $table->enum('order_status',['pending', 'paid', 'processing', 'shipped', 'delivered', 'completed', 'canceled', 'failed', 'refunded', 'on_hold']);
             $table->timestamps();
 
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('set null');
-            $table->foreign('landingpage_id')->references('landingpage_id')->on('landing_pages')->onDelete('set null');
-            $table->foreign('delivery_id')->references('delivery_id')->on('deliveries')->onDelete('set null');
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('no action');
+            $table->foreign('landingpage_id')->references('landingpage_id')->on('landing_pages')->onDelete('no action');
+            $table->foreign('delivery_id')->references('delivery_id')->on('deliveries')->onDelete('no action');
         });
     }
 

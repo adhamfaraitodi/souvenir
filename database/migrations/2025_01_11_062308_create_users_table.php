@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('phone', 15);
             $table->timestamps();
 
-            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('set null');
+            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('no action');
 
         });
     }

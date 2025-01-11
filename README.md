@@ -1,12 +1,12 @@
 ## HOW TO RUN
 
 1. composer install
-2. php artisan session:table
-3. php artisan migrate
-4. php artisan serve
-5. npm install
-6. npm run dev
-7. if need migration refresh: php artisan migrate:refresh
+
+2. command for database eloquent : php artisan migrate
+3. command for webserver : php artisan serve
+4. command for install npm : npm install
+5. command for run npm : npm run dev
+6. command for refresh migrate : php artisan migrate:refresh
 
 ## SYSTEM REQUIREMENT
 
@@ -19,3 +19,4 @@
 7.  Grafik Editor: lucid chart & Figma
 8.  Bahasa pemrograman : PHP ver 8.2.4
 9.  Package : node v20.11.1 & npm 10.2.4
+

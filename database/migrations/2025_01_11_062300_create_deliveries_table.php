@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('deliveries', function (Blueprint $table) {
             $table->id('delivery_id');
+            $table->enum('name',['JNE','JNT']);
             $table->decimal('shipping_cost',15,0);
             $table->date('shipping_date');
             $table->enum('box',['yes','no']);
+            $table->tinyInteger('tracking_code');
             $table->timestamps();
         });
     }
