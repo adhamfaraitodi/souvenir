@@ -2,7 +2,7 @@ import "./bootstrap";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createRoot } from "react-dom/client";
-import Home from "./Home";
+import Home from "./components/Home";
 
 const App = () => (
     <h1 className="text-4xl font-bold text-blue-500">
