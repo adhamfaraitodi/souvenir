@@ -5,6 +5,7 @@
 3. command for webserver : php artisan serve
 4. command for install npm : npm install
 5. command for run npm : npm run dev
+6. command for refresh migrate : php artisan migrate:refresh
 
 ## SYSTEM REQUIREMENT
 

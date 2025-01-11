@@ -21,9 +21,9 @@ return new class extends Migration
             $table->integer('stock');
             $table->timestamps();
 
-            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('set null');
-            $table->foreign('category_id')->references('category_id')->on('categories')->onDelete('set null');
-            $table->foreign('product_detail_id')->references('product_detail_id')->on('product_details')->onDelete('set null');
+            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('no action');
+            $table->foreign('category_id')->references('category_id')->on('categories')->onDelete('no action');
+            $table->foreign('product_detail_id')->references('product_detail_id')->on('product_details')->onDelete('no action');
         });
     }
 
