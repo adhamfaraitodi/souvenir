@@ -16,7 +16,12 @@
     },
     "dependencies": {
         "@vitejs/plugin-react": "^4.3.4",
+        "grapesjs": "^0.22.4",
+        "grapesjs-plugin-forms": "^2.0.6",
+        "grapesjs-tailwind": "^1.0.11",
+        "grapesjs-templates": "^1.0.6",
         "react": "^19.0.0",
-        "react-dom": "^19.0.0"
+        "react-dom": "^19.0.0",
+        "react-router": "^7.1.1"
     }
 }

@@ -1,13 +1,17 @@
 import "./bootstrap";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createRoot } from "react-dom/client";
-import Home from "./components/Home";
+import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router";
 
 const App = () => (
-    <h1 className="text-4xl font-bold text-blue-500">
-        <Home />
-    </h1>
+    <Routes>
+        <Route path="/" element={<Home />} />
+    </Routes>
 );
 
-ReactDOM.createRoot(document.getElementById("app")).render(<App />);
+ReactDOM.createRoot(document.getElementById("app")).render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+);
