@@ -14,24 +14,27 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id('order_id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('landingpage_id');
+            $table->unsignedBigInteger('landingpage_id')->unique();
             $table->unsignedBigInteger('delivery_id');
-            $table->string('company_profile',255);
+            $table->string('company_profile', 255);
             $table->text('description');
             $table->date('payment_date');
-            $table->enum('payment_status',['pending', 'success', 'failed', 'canceled', 'deny']);
-            $table->enum('order_status',['pending', 'paid', 'processing', 'shipped', 'delivered', 'completed', 'canceled', 'failed', 'refunded', 'on_hold']);
+            $table->enum('payment_status', ['pending', 'success', 'failed', 'canceled', 'deny']);
+            $table->enum('order_status', [
+                'pending', 'paid', 'processing', 'shipped',
+                'delivered', 'completed', 'canceled',
+                'failed', 'refunded', 'on_hold'
+            ]);
             $table->timestamps();
 
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('no action');
-            $table->foreign('landingpage_id')->references('landingpage_id')->on('landing_pages')->onDelete('no action');
+            $table->foreign('landingpage_id')->references('landingpage_id')->on('landing_pages')->onDelete('cascade');
             $table->foreign('delivery_id')->references('delivery_id')->on('deliveries')->onDelete('no action');
         });
+
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
         Schema::dropIfExists('orders');
