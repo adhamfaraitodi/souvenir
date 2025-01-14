@@ -17,7 +17,7 @@ return new class extends Migration
             $table->decimal('shipping_cost',15,0);
             $table->date('shipping_date');
             $table->enum('box',['yes','no']);
-            $table->tinyInteger('tracking_code');
+            $table->string('tracking_code',15);
             $table->timestamps();
         });
     }

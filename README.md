@@ -1,12 +1,14 @@
 ## HOW TO RUN
 
 1. composer install
-
 2. command for database eloquent : php artisan migrate
 3. command for webserver : php artisan serve
 4. command for install npm : npm install
 5. command for run npm : npm run dev
 6. command for refresh migrate : php artisan migrate:refresh
+7. command for init Laravel storage : php artisan storage:link
+8. command for populate seed : php artisan db:seed
+
 
 ## SYSTEM REQUIREMENT
 

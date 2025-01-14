@@ -14,9 +14,9 @@ import UserLandingPage from "./pages/User/LandingPage";
 import UserDashboard from "./pages/User/Dashboard";
 
 const App = () => {
-    const [auth, setAuth] = useState("admin");
+    const [auth, setAuth] = useState("Admin");
     const defaultPage = () => {
-        if (auth === "admin") return <Navigate to="/admin" />;
+        if (auth === "Admin") return <Navigate to="/admin" />;
         if (auth === "user") return <Navigate to="/user" />;
         if (!auth) return <Navigate to="/login" />;
     };
