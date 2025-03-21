@@ -1,5 +1,5 @@
 import { List, UserCircle,CaretDown } from "@phosphor-icons/react";
-import { usePage } from "@inertiajs/react";
+import {Link, usePage} from "@inertiajs/react";
 import { useState } from "react";
 export function Header({sideBarToggle,setSideBarToggle}) {
     const user = usePage().props.auth.user;
@@ -28,7 +28,14 @@ export function Header({sideBarToggle,setSideBarToggle}) {
                             showProfile && (
                             <div className={`absolute top-10 right-0 w-[200px] flex flex-col px-5 py-2 bg-white border-[1px] border-gray-300 rounded-md shadow-md`}>
                                 <p>Settings</p>
-                                <p>Log Out</p>
+                                <Link
+                                    href={route('logout')}
+                                    method="post"
+                                    as="button"
+                                    className="text-left"
+                                >
+                                    Log Out
+                                </Link>
                             </div>
                             )
                         }
